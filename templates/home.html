@@ -1,0 +1,258 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Thajudheen Faizy K. | Developer</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">&lt;/&gt;TF</div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="tag"> &gt; Python Django Developer</div>
+
+        <h1>
+            Hi, I'm <br>
+            <span>Thajudheen Faizy K.</span>
+        </h1>
+
+        <h2>Building Modern Web Applications</h2>
+
+        <p>
+            I'm an aspiring Python Django Developer
+            passionate about backend development,
+            database management and creating useful
+            web applications.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="btn secondary">
+                View My Projects
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Contact Me
+            </a>
+
+            <a href="{% static 'documents/Thaju Resume .pdf' %}"
+            class="btn secondary"
+            target="_blank">
+                View My CV
+            </a>
+        </div>
+
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <p class="section-label">ABOUT ME</p>
+            <h2>Building useful web applications with Django.</h2>
+
+            <p>
+                I completed a six-month Python Django diploma course
+                and I am focused on backend development, databases,
+                and creating clean user-friendly web applications.
+            </p>
+        </div>
+
+        <div class="about-skills">
+            <p>Python</p>
+            <p>Django</p>
+            <p>HTML & CSS</p>
+            <p>SQL & REST API</p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <p class="section-label">FEATURED WORK</p>
+        <h2>Selected Projects</h2>
+
+        <div class="projects-grid">
+            <article class="project-card">
+                <span class="project-number">01</span>
+                <h3>Online Library</h3>
+                <p>
+                    A Django-based web application for managing
+                    books, users, and library operations.
+                </p>
+
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>SQLite</span>
+                </div>
+                <a href="https://thaju.pythonanywhere.com"
+                class="project-link"
+                target="_blank"
+                rel="noopener">
+                    View Live Demo
+                </a>
+                <a href="https://github.com/thajudeenfaizy786-cmd/Online-Laibrary"
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer">
+                    View Source Code
+                </a>
+            </article>
+
+            <article class="project-card">
+                <span class="project-number">02</span>
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A responsive portfolio website built to showcase
+                    my skills, projects, and developer journey.
+                </p>
+
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Django</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="certificates" class="certificates-section">
+        <p class="section-label">CERTIFICATIONS</p>
+        <h2>Courses & Certificates</h2>
+
+        <div class="certificates-grid">
+            <article class="certificate-card">
+                <span class="certificate-number">01</span>
+
+                <h3>Python Programming with Django</h3>
+
+                <p class="certificate-issuer">
+                    Issued by: Entri.app
+                </p>
+
+                <p>Completed in: May 2026 . Project: Online Library</p>
+
+                <a href="{% static 'certificates/Certificate 1 Entry.pdf' %}"
+                class="certificate-link"
+                target="_blank"
+                rel="noopener">
+                    View Certificate
+                </a>
+            </article>
+
+            <article class="certificate-card">
+                <span class="certificate-number">02</span>
+
+                <h3>Python Programming</h3>
+
+                <p class="certificate-issuer">
+                    Issued by: Entri Software Private Limited . Skill India / NSDC
+                </p>
+
+                <p>Completed in:May 2026 . Grade A+</p>
+
+                <a href="{% static 'certificates/NSDC Certificate Entry.pdf' %}"
+                class="certificate-link"
+                target="_blank"
+                rel="noopener">
+                    View Certificate
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <section id="education" class="education-section">
+        <p class="section-label">EDUCATION & COMMUNITY</p>
+        <h2>Education and leadership beyond technology.</h2>
+
+        <div class="education-grid">
+            <article class="education-card">
+                <span class="education-year">2023</span>
+                <h3>Fazil Failee Degree</h3>
+
+                <p>
+                    Graduated from Jamia Nooriyya Arabiyya College,
+                    Pattikkad,Perinthalmanna.
+                </p>
+            </article>
+
+            <article class="education-card">
+                <span class="education-year">CURRENT</span>
+                <h3>Community Service & Leadership</h3>
+
+                <p>
+                    Serving as a Madrasa Masjid Imam under
+                    Samastha Kerala Jamiyyathul Ulama and
+                    actively participating in local SSKSF activities.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section id="skills" style="padding:60px 10%;">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            {% for skill in skills %}
+            <div class="skill-card">
+                <h3>{{skill}}</h3>
+            </div>
+            {% endfor %}
+        </div>    
+    </section>
+
+    <section id="contact" class="contact-section">
+        <p class="section-label">LET'S CONNECT</p>
+        <h2>Have a project in mind?</h2>
+        <p>
+            I am open to learning opportunities, collaborations,
+            and Django web-development projects.
+        </p>
+        <div class="contact-links">
+            <a href="mailto:thajudeenfaizy786@gmail.com" class="contact-btn">
+                Email Me
+            </a>
+
+            <a href="tel:+918592911476" class="contact-btn contact-outline">
+                Call Me
+            </a>
+
+            <a href="https://wa.me/918592911476"
+            class="contact-btn contact-outline"
+            target="_blank"
+            rel="noopener">
+                WhatsApp
+            </a>
+
+            <a href="https://www.linkedin.com/in/thajudeen-k-ibnjamal/"
+            class="contact-btn contact-outline"
+            target="_blank"
+            rel="noopener noreferrer">
+                LinkedIn
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-logo">&lt;/&gt;TF.</div>
+
+        <p>
+            © 2026 Thajudheen Faizy K. · Built with Python and Django
+        </p>
+
+        <a href="/">Back to top</a>
+    </footer>
+
+</body>
+</html>
